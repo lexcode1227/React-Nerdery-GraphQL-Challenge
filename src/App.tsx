@@ -4,7 +4,7 @@ import Characters from "./pages/Characters";
 
 function App() {
   const client = new ApolloClient({
-    uri: process.env.REACT_APP_GRAPHQL_URI,
+    uri: "https://rickandmortyapi.com/graphql",
     cache: new InMemoryCache(),
   });
   return (
