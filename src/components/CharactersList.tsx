@@ -1,9 +1,7 @@
-// import React from 'react'
-
 import { useQuery } from "@apollo/client";
 import { GET_CHARACTERS } from "../graphql/Characters";
-import { CharactersData } from "../utils/Types";
 import CharacterCard from "./CharacterCard";
+import { CharactersData } from "../utils/types";
 
 const CharactersList = () => {
   const { loading, error, data } = useQuery<CharactersData>(GET_CHARACTERS);

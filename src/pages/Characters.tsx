@@ -1,4 +1,4 @@
-import CharacterDetailsCard from "../components/CharacterDetailsCard";
+import CharacterDetails from "../components/CharacterDetails";
 import CharacterList from "../components/CharactersList";
 import Navbar from "../components/Navbar";
 
@@ -8,7 +8,7 @@ const Characters = () => {
       <Navbar />
       <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <CharacterList />
-        <CharacterDetailsCard />
+        <CharacterDetails />
       </section>
     </main>
   );

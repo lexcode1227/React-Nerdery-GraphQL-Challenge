@@ -1,4 +1,4 @@
-import { Character } from "../utils/Types";
+import { Character } from "../utils/types.ts";
 
 const CharacterCard = ({ character }: { character: Character }) => {
   return (
