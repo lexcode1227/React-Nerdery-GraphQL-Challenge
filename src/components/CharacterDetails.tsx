@@ -2,6 +2,7 @@ import { useQuery } from "@apollo/client";
 import { GET_CHARACTER } from "../graphql/Characters";
 import CharacterDetailsCard from "./CharacterDetailsCard";
 import { CharacterDetailsProps } from "../utils/types";
+import Loading from "./Loading";
 
 const CharacterDetails: React.FC<CharacterDetailsProps> = ({
   selectedCharacter,
@@ -12,7 +13,7 @@ const CharacterDetails: React.FC<CharacterDetailsProps> = ({
     },
   });
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loading />;
   if (error) return <p>Error {error.message}</p>;
 
   return (

@@ -7,6 +7,9 @@ export type Character = {
 export type CharactersData = {
   characters: {
     results: Character[];
+    info: {
+      next: string;
+    };
   };
 };
 
@@ -16,22 +19,24 @@ export type Episode = {
 };
 
 export type CharacterDetails = {
-  id: string;
-  image: string;
-  name: string;
-  species: string;
-  status: string;
-  gender: string;
-  location: {
+  data: {
+    id: string;
+    image: string;
     name: string;
+    species: string;
+    status: string;
+    gender: string;
+    location: {
+      name: string;
+    };
+    origin: {
+      name: string;
+    };
+    episode: {
+      name: string;
+      episode: string;
+    }[];
   };
-  origin: {
-    name: string;
-  };
-  episode: {
-    name: string;
-    episode: string;
-  }[];
 };
 
 export type CharacterListProps = {
@@ -40,4 +45,11 @@ export type CharacterListProps = {
 
 export type CharacterDetailsProps = {
   selectedCharacter: string;
+};
+
+export type CharacterState = {
+  characters: CharacterDetails[];
+  currentPage: number;
+  loading: boolean;
+  hasMore: boolean;
 };
