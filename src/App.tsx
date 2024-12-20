@@ -1,4 +1,5 @@
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   const client = new ApolloClient({
@@ -7,9 +8,11 @@ function App() {
   });
   return (
     <ApolloProvider client={client}>
-      <div>
-        <h1>Rick and Morty</h1>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<div>Rick and Morty characters</div>} />
+        </Routes>
+      </BrowserRouter>
     </ApolloProvider>
   );
 }
