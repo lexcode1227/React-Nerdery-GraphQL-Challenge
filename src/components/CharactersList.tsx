@@ -12,12 +12,10 @@ const CharactersList = () => {
   if (error) return <p>Error {error.message}</p>;
 
   return (
-    <div>
+    <div className="h-screen overflow-y-auto">
       {data &&
         data?.characters.results.map((character) => (
-          <div>
-            <CharacterCard key={character.id} character={character} />
-          </div>
+          <CharacterCard key={character.id} character={character} />
         ))}
     </div>
   );
