@@ -10,7 +10,7 @@ const Characters = () => {
     setSelectedCharacter(id);
   };
   return (
-    <main className=" w-lvw grid grid-cols-1 gap-4">
+    <main className="grid grid-cols-1 gap-4 w-full h-screen">
       <Navbar />
       <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <CharacterList handleSelectedCharacter={handleSelectedCharacter} />
