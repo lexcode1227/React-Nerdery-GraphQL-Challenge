@@ -33,3 +33,11 @@ export type CharacterDetails = {
     episode: string;
   }[];
 };
+
+export type CharacterListProps = {
+  handleSelectedCharacter: (id: string) => void;
+};
+
+export type CharacterDetailsProps = {
+  selectedCharacter: string;
+};

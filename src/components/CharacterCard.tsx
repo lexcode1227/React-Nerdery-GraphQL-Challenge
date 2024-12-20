@@ -1,8 +1,17 @@
 import { Character } from "../utils/types.ts";
 
-const CharacterCard = ({ character }: { character: Character }) => {
+const CharacterCard = ({
+  character,
+  handleSelectedCharacter,
+}: {
+  character: Character;
+  handleSelectedCharacter: (id: string) => void;
+}) => {
   return (
-    <article className="border border-solid border-gray-600 text-black p-4 flex justify-between items-center">
+    <article
+      className="border border-solid border-gray-600 text-black p-4 flex justify-between items-center"
+      onClick={() => handleSelectedCharacter(character.id)}
+    >
       <div>
         <h2 className="text-base text-[#333333] font-bold">
           {character?.name}
@@ -20,9 +29,9 @@ const CharacterCard = ({ character }: { character: Character }) => {
       >
         <path
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="m9 5 7 7-7 7"
         />
       </svg>

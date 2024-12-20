@@ -1,12 +1,14 @@
 import { useQuery } from "@apollo/client";
 import { GET_CHARACTER } from "../graphql/Characters";
 import CharacterDetailsCard from "./CharacterDetailsCard";
+import { CharacterDetailsProps } from "../utils/types";
 
-const CharacterDetails = () => {
-  const params = { id: "1" };
+const CharacterDetails: React.FC<CharacterDetailsProps> = ({
+  selectedCharacter,
+}) => {
   const { data, loading, error } = useQuery(GET_CHARACTER, {
     variables: {
-      id: params.id,
+      id: selectedCharacter,
     },
   });
 

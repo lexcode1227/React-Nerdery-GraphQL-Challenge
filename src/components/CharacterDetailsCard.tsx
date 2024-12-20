@@ -6,7 +6,7 @@ const CharacterDetailsCard = ({
   character: CharacterDetails;
 }) => {
   return (
-    <div className=" w-full border rounded-md border-solid border-gray-600 text-black p-4">
+    <div className="flex flex-col items-start  w-full border rounded-md border-solid border-gray-600 text-black p-4">
       <p>Name: {character?.name}</p>
       <img
         src={character?.image}
