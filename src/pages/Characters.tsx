@@ -1,13 +1,15 @@
-// import React from 'react'
-
-import Card from "../components/Card";
-import CardList from "../components/CardList";
+import CharacterDetailsCard from "../components/CharacterDetailsCard";
+import CharacterList from "../components/CharactersList";
+import Navbar from "../components/Navbar";
 
 const Characters = () => {
   return (
-    <main>
-      <CardList />
-      <Card />
+    <main className=" w-lvw grid grid-cols-1 gap-4">
+      <Navbar />
+      <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <CharacterList />
+        <CharacterDetailsCard />
+      </section>
     </main>
   );
 };
