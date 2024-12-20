@@ -18,7 +18,9 @@ const CharacterDetails: React.FC<CharacterDetailsProps> = ({
 
   return (
     <article className="flex flex-col items-center gap-4 p-8">
-      <h2 className="font-bold text-base text-[#333333]">Character Details</h2>
+      <h2 className="w-full font-bold text-left text-base text-[#333333]">
+        Character Details
+      </h2>
       <CharacterDetailsCard key={data?.id} character={data.character} />
     </article>
   );
