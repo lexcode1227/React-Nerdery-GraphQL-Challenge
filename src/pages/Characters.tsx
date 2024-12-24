@@ -4,7 +4,9 @@ import CharacterList from "../components/CharactersList";
 import Navbar from "../components/Navbar";
 
 const Characters = () => {
-  const [selectedCharacter, setSelectedCharacter] = useState<string>("1");
+  const [selectedCharacter, setSelectedCharacter] = useState<string | null>(
+    null
+  );
 
   const handleSelectedCharacter = (id: string) => {
     setSelectedCharacter(id);
@@ -14,7 +16,9 @@ const Characters = () => {
       <Navbar />
       <section className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-[350px,1fr]">
         <CharacterList handleSelectedCharacter={handleSelectedCharacter} />
-        <CharacterDetails selectedCharacter={selectedCharacter} />
+        {selectedCharacter && (
+          <CharacterDetails selectedCharacter={selectedCharacter} />
+        )}
       </section>
     </main>
   );

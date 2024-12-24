@@ -9,7 +9,7 @@ const CharacterCard = ({
 }) => {
   return (
     <article
-      className="border border-solid border-gray-600 text-black p-4 flex justify-between items-center"
+      className="border border-solid border-gray-600 text-black p-4 flex justify-between items-center cursor-pointer"
       onClick={() => handleSelectedCharacter(character.id)}
     >
       <div>
