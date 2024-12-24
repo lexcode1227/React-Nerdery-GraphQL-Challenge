@@ -2,7 +2,7 @@ import { useQuery } from "@apollo/client";
 import { GET_CHARACTER } from "../graphql/Characters";
 import CharacterDetailsCard from "./CharacterDetailsCard";
 import { CharacterDetailsProps } from "../utils/types";
-import Loading from "./Loading";
+import Loading from "./Loader";
 
 const CharacterDetails: React.FC<CharacterDetailsProps> = ({
   selectedCharacter,
@@ -17,7 +17,7 @@ const CharacterDetails: React.FC<CharacterDetailsProps> = ({
   if (error) return <p>Error {error.message}</p>;
 
   return (
-    <article className="flex flex-col items-center gap-4 p-8">
+    <article className="flex flex-col items-center gap-4 p-8 h-auto min-h-max">
       <h2 className="w-full font-bold text-left text-base text-[#333333]">
         Character Details
       </h2>

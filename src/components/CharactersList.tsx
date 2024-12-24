@@ -2,7 +2,7 @@ import { useQuery } from "@apollo/client";
 import { GET_CHARACTERS } from "../graphql/Characters";
 import CharacterCard from "./CharacterCard";
 import { CharacterListProps, CharactersData } from "../utils/types";
-import Loading from "./Loading";
+import Loading from "./Loader";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 const CharactersList: React.FC<CharacterListProps> = ({
@@ -46,7 +46,7 @@ const CharactersList: React.FC<CharacterListProps> = ({
   if (loading && !characters.length) return <Loading />;
   return (
     <div
-      className="h-[80vh] overflow-y-auto order-2 md:order-none w-full lg:max-w-[350px]"
+      className="h-[90vh] overflow-y-auto order-2 md:order-none w-full lg:max-w-[350px]"
       id="charactersContainer"
     >
       <InfiniteScroll

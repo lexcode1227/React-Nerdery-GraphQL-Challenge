@@ -3,17 +3,3 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-.loader {
-  width: 50px;
-  --b: 8px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  padding: 1px;
-  background: conic-gradient(#0000 10%, #f03355) content-box;
-}
-@keyframes l4 {
-  to {
-    transform: rotate(1turn);
-  }
-}
