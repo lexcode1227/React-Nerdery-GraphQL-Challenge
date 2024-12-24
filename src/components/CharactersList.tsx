@@ -46,7 +46,7 @@ const CharactersList: React.FC<CharacterListProps> = ({
   if (loading && !characters.length) return <Loading />;
   return (
     <div
-      className="h-[80vh] overflow-y-auto order-2 md:order-none max-w-[350px]"
+      className="h-[80vh] overflow-y-auto order-2 md:order-none w-full lg:max-w-[350px]"
       id="charactersContainer"
     >
       <InfiniteScroll
