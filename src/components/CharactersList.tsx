@@ -54,7 +54,7 @@ const CharactersList: React.FC<CharacterListProps> = ({
   }, [handleScroll, loading, nextPage]);
 
   return (
-    <div className="h-screen overflow-y-auto order-2 md:order-none">
+    <div className="h-screen overflow-y-auto order-2 md:order-none max-w-[350px]">
       {characters.map((character) => (
         <CharacterCard
           key={character.id}

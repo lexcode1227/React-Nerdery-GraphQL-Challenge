@@ -12,7 +12,7 @@ const Characters = () => {
   return (
     <main className="grid grid-cols-1 gap-4 w-full h-screen">
       <Navbar />
-      <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
+      <section className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-[350px,1fr]">
         <CharacterList handleSelectedCharacter={handleSelectedCharacter} />
         <CharacterDetails selectedCharacter={selectedCharacter} />
       </section>
